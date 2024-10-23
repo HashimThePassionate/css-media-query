@@ -1,0 +1,118 @@
+/* Reset default margins and paddings */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+background-color: #f4f4f4;
+}
+.header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+}
+
+.logo {
+font-size: 1.5em;
+font-weight: bold;
+}
+
+.nav ul {
+display: flex;
+list-style: none;
+}
+
+.nav ul li {
+margin: 0 15px;
+}
+
+.nav ul li a {
+color: #fff;
+text-decoration: none;
+}
+
+.nav ul li a:hover {
+text-decoration: underline;
+}
+
+.hero {
+background: url('./images/honey-bee.jpg') no-repeat center/cover;
+color: #fff;
+text-align: center;
+padding: 100px 20px;
+}
+
+.hero h1 {
+font-size: 3em;
+}
+
+.hero p {
+font-size: 1.2em;
+}
+
+.content {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+padding: 40px 20px;
+}
+
+.card {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+text-align: center;
+padding: 20px;
+}
+
+.footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 15px 0;
+}
+
+/* Media Queries */
+
+/* Tablets: Adjust grid to two columns */
+@media (max-width: 768px) {
+.content {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+}
+
+/* Mobile Devices: Stack layout */
+@media (max-width: 480px) {
+.header {
+    flex-direction: column;
+}
+
+.nav ul {
+    flex-direction: column;
+}
+
+.content {
+    grid-template-columns: 1fr;
+}
+
+.hero {
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2em;
+}
+}
